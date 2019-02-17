@@ -1,0 +1,58 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	width: 100%;
+	height: 100%;
+	color: #FFF;
+	background-color: #5A91EB;
+}
+.code h2{
+	margin: 6% 0;
+	font-size: 1.5em;
+	text-align: center;
+}
+.code_img{
+	width: 100%;
+	text-align: center;
+	padding: 4% 0;
+	background-color: #FFF;
+}
+.code_img img{
+	width: 72%;
+	padding: 2% 12%;
+	height: auto;
+}
+.code_img small{
+	color: #4E7EFE;
+}
+/*三个图标*/
+.code_ico{
+	text-align: center;
+}
+.code_icon{
+	display: inline-block;
+	vertical-align: top;
+	width: 20%;
+	margin: 21px 8px;
+	text-align: center;
+}
+
+.code_icon img{
+	width: 60%;
+}
+.code_icon p{
+	margin: 6px 0;
+}
+/*底部*/
+.code_bottom{
+	background-color: #FFF;
+	width: 100%;
+	padding: 10px 0;
+	text-align: center;
+	color: #5A91EB;
+	font-size: 1.5em;
+	position: absolute;
+	bottom: 0px;
+}

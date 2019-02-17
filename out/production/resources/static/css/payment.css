@@ -1,0 +1,152 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-size: 1em;
+}
+input,button{
+	outline: none;
+	border: none;
+}
+.receivables{
+	width: 1200px;
+	margin: 0 auto;
+}
+.receivables h3{
+	text-align: center;
+	margin: 24px 0;
+	font-size: 1.5em;
+}
+.receivables p{
+	font-size: 1.2em;
+	text-align: center;
+}
+.drop_img{
+	width: 200px;
+	height: 240px;
+	margin: 18px 2px;
+	padding: 12px;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+}
+.drop{
+	border: 1px dotted #666;
+}
+.drop_img>img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	text-align: center;
+}
+.title{
+	margin-top: 16px;
+	text-align: center;
+}
+.file {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	right: 0;
+	top: 0;
+	opacity: 0;
+}
+.cos{
+	width: 120px;
+	height: 20px;
+	margin: 0 auto;
+	position: relative;
+	top: -40px;
+	border-radius: 25px;
+	background-color: #4E7EFE
+}
+.rol{
+	height: 120px;
+	width: 20px;
+	margin: 0 auto;
+	position: relative;
+	top: 32px;
+	border-radius: 25px;
+	background-color: #4E7EFE
+}
+/*下面三个框*/
+.code{
+	width: 100%;
+	text-align: center;
+	height: 36px;
+	line-height: 36px;
+	margin: 12px 0;
+	padding: 6px;
+	border-radius: 25px;
+	position: relative;
+}
+.code input{
+	cursor: pointer;
+	width: 100%;
+	text-align: center;
+	height: 36px;
+	padding: 6px;
+	border-radius: 25px;
+	border: 1px solid #999;
+	background-color: #EEE;
+}
+.code i{
+	font-size: 20px;
+	color: #F00;
+	margin: 0 6px;
+	opacity: 0;
+	transition: .5s;
+	position: absolute;
+    right: 12px;
+    top: 15px;
+}
+.code:hover i{
+	opacity: 1;
+}
+.code_name input{
+	width: 100%;
+	text-align: center;
+	height: 36px;
+	margin: 6px;
+	padding: 6px;
+	font-size: 16px;
+	border-radius: 25px;
+	border: 1px solid #999;
+}
+/*一键合成*/
+.key_btn{
+	text-align: center;
+	margin: 12px auto;
+}
+.key_btn input[type=button]{
+	cursor: pointer;
+	width: 150px;
+	height: 48px;
+	text-align: center;
+	color: #FFF;
+	font-size: 16px;
+	font-weight: 900;
+	border-radius: 25px;
+	transition: .5s;
+	background-color: #4E7EFE;
+}
+.key_btn input:hover{
+	box-shadow: 4px 4px 7px #4E7EFE;
+}
+@font-face {
+  font-family: 'iconfont';  /* project id 1043622 */
+  src: url('//at.alicdn.com/t/font_1043622_bfsbo14mzab.eot');
+  src: url('//at.alicdn.com/t/font_1043622_bfsbo14mzab.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1043622_bfsbo14mzab.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1043622_bfsbo14mzab.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1043622_bfsbo14mzab.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1043622_bfsbo14mzab.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}

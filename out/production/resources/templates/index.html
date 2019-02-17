@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" href="css/alipay.css" th:href="@{css/alipay.css}"/>
+	<link rel="stylesheet" href="css/payment.css" th:href="@{css/payment.css}"/>
+	<title>Document</title>
+</head>
+<body>
+	<div class="receivables">
+		<h3>孤城落寞收款码-收款码三合一</h3>
+		<p>将微信收款码、QQ收款码和支付宝收款码合并为一个二维码，用户扫码后直接付款给商家，无需手续费</p>
+		<div class="drop_area">
+			<div class="drop_img drop">
+				<div class="title">
+					<img src="img/qq.png" th:src="@{img/qq.png}" alt="" />
+				</div>
+				<img src="" class="img"/>
+				<input type="file" class="file" placeholder="QQ收款码" accept="image/*" capture="camera">
+			</div>
+			<div class="drop_img">
+				<div class="title">
+					<div class="rol"></div>
+					<div class="cos"></div>
+				</div>
+			</div>
+			<div class="drop_img drop">
+				<div class="title">
+					<img src="img/alipay.png"  th:src="@{img/alipay.png}" alt="" />
+				</div>
+				<img src="" class="img"/>
+				<input type="file" class="file" placeholder="支付宝收款码" accept="image/*" capture="camera">
+			</div>
+			<div class="drop_img">
+				<div class="title">
+					<div class="rol"></div>
+					<div class="cos"></div>
+				</div>
+			</div>
+			<div class="drop_img drop">
+				<div class="title">
+					<img src="img/wechat.png"  th:src="@{img/wechat.png}"alt="" />
+				</div>
+				<img src="" class="img" />
+				<input type="file" class="file" placeholder="微信收款码" accept="image/*" capture="camera">
+			</div>
+		</div>
+		<div class="drop_code" oncopy="return false;" oncut="return false;" onselectstart="return false">
+			<div class="code">
+				<input type="text" id="alipay"  value="https://qr.alipay.com/fkx08534olrnqznrblftka9" placeholder="支付宝收款码" readonly="readonly"/>
+				<!--<input type="text" id="alipay"  placeholder="支付宝收款码" readonly="readonly"/>-->
+				<i class="iconfont">&#xe600;</i>
+			</div>
+			<div class="code">
+				<input type="text" id="qq" value="https://i.qianbao.qq.com/wallet/sqrcode.htm?m=tenpay&f=wallet&a=1&ac=F841F5F321D1E476DAAB7EE1300BD900B0315F26C1685FD0A8B4066FC355070E&u=2512433168&n=%E5%8D%83%E9%87%8C%E4%B8%8D%E5%94%BE%E4%BA%95" placeholder="QQ收款码" readonly="readonly"/>
+				<!--<input type="text" id="qq" placeholder="QQ收款码" readonly="readonly"/>-->
+				<i class="iconfont">&#xe600;</i>
+			</div>
+			<div class="code">
+				<input type="text" id="weixin" value="wxp://f2f093w94HieH-Oc3wpXkwlwosryb0vAYl8m" placeholder="微信收款码" readonly="readonly"/>
+				<!--<input type="text" id="weixin" placeholder="微信收款码" readonly="readonly"/>-->
+				<i class="iconfont">&#xe600;</i>
+			</div>
+			<div class="code_name">
+				<input type="text"  id="username" value="XXXX" placeholder="请输入收款人昵称"/>
+				<!--<input type="text"  id="username" placeholder="请输入收款人昵称"/>-->
+			</div>
+		</div>
+		<div class="key_btn">
+			<input type="button" value="一键合成">
+		</div>
+	</div>
+	<div class="alipay_popup">
+		<div class="alipay_code">
+			<h2 >扫码向<span id="name"></span>付款</h2>
+			<div class="code_img">
+				<div class="code_save">
+					<small style="color: #000;">无需加好友，扫一扫向我付钱</small>
+				</div>
+				<div>
+					 <img id="code" src=""/>
+					<!--<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAGQCAIAAAAP3aGbAAAKy0lEQVR42u3WgYHDIAwEQfff9H8R-->
+<!--sUF3mi0Ax4DGef4kKaTHFkgCliQBSxKwJAlYkgQsScCSJGBJErAkAUuSgCVJwJIELEkCliQBSxKw-->
+<!--JAlYkvQZWM+OXtjfAb/h9x95YIWIKzdhJ5dPFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAEL-->
+<!--WMACFrCABSxgAQtYwAIWsIAFLGCZLGABC1jAApZtBRawgLUDrL+EIrBY8iMjvi4d9EdPFrCABSxg-->
+<!--AQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGCZLGABC1jAApZtBRaw-->
+<!--gAWsly5oxPXq8ChiBiIujMkCFrCABSxg2VZgAQtYwAIWsIBlsoAFLGABC1i2FVjAAhawgAUsYJks-->
+<!--YAELWMAClm0FFrCABSxgAQtYJgtYwAIWsIBlW6NGPUK0jp30EQUWsIAFLGABC1jAAhawgAUsYAEL-->
+<!--WMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwLLC8bM4gIUbBSxg-->
+<!--ueLAcprAcr2ABSxgAQtYwAIWsIDligPLaQILWMACFrCABSxgAQtYwHLFgQUsYAELWG4UsIBlBWAB-->
+<!--C1iulysOLGC1gDWhJaMeocmEt3BYc44bWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAEL-->
+<!--WMACFrCABSxgAQtYwAIWsIAFLGABC1jAsq3AAhawdoPVUcQcWmHVCksmC1jAsgKwgAUsK1gBWMAC-->
+<!--lhWsACxgAcsKwAIWsKxgBWABC1hWsAKwgAUsKwALWMCyghWABSxgWcEKwAKWIbECsKrB0lsXtOMt-->
+<!--uofkxdc0Mr8egS0AFrCABSxgAQtYwAIWsIAFLGAJWMACFrCABSxgAQtYwAIWsIAlYAELWMACFrCA-->
+<!--JWABC1jAApaABSxgNYDligdhEbFCxIUxF9fZBRawgAUsYDkYYAHLXAALWMACFrCABSxgAQtYDgZY-->
+<!--wDIXwAIWsIAFLGABC1jAApaDARawzAWwgAUsYAHLwQALWMCqAOvAvk94RMdrLvkNXA4KWMACFrCA-->
+<!--BSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAWs-->
+<!--3WBFvPME0dzgoK2OgHuCqjePAFjAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhaw-->
+<!--gAUsYAELWMACFrCABSxgAQtYwAIWsIAFrBVgRayw5OwnvMWjoq/sxR8JLGABC1jAAhawgAUsYAEL-->
+<!--WMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAJWBVgTLmj0vm/T-->
+<!--pHuKRn1EI/4KAMsVBxawgAUsYAELWMACFrCABSxgueLAAhawgAUsYAELWMACFrCABSxXHFjAAhaw-->
+<!--gAUsYAELWMBymsACFrCABSxg3Q43c4bEI47RHxGwgEUTYAELWMDyCGABC1jA8ghgAQtYNAEWsIAF-->
+<!--LI8AFrCABSyPABawgEUTYAELWMDyCGABC1jA8ghgAQtYNAEWsPK56RAt4i0mzEDHVi+5D8ACFrCA-->
+<!--BSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUs-->
+<!--YO0GK2LUI1oyqBEWRGzUkjsJLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jA-->
+<!--AhawgAUsYAELWMACFrCABSxgAQtYwAJWNVhLBrVjDju2OuIT+HxfxG/48BCBBSxgAQtYwAIWsIAF-->
+<!--LGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsUwQsYAGrAazJr3Ty-->
+<!--ik+4f7jRHtGABSxgAQtYwAIWsIAFLGABS8ACFrCABSxgAQtYwAIWsIAFLAELWMACFrCABSxgAQtY-->
+<!--wAIWsAQsYAELWMACVs4KEY9Y4nIHuxGnOflWAwtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCA-->
+<!--BSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCAVQHWhBlw/1ZNsm/kW2cRfaOABSxgAQtY-->
+<!--wAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMCq-->
+<!--AKvjineo6hFNlzZC9os7CSxgeQSwgAUsYAELWMACFk2ABSxgAcsjgAUsYBl1YAELWMCiCbCABSxg-->
+<!--eQSwgAUsow4sYAELWB4BLGABC1geAawdYB145wmPcEGv3+BRY2ajPv/xwAIWsIAFLGABC1g2CljA-->
+<!--AhawgAUsYAELWMACFrCAZaOABSxgAQtYwAIWsIAFLGABC1g2CljAAhawgAUsYAELWCvAmrCtE+oA-->
+<!--y48M+sJ1f8iBBSwWAAtYwAKWHwksYAGLBcACFrCABSxgAQtYwPIjgQUsYLEAWMACFrCABSxgAQtY-->
+<!--fiSwgAUsFgALWMACFrCABaxTHTiYCaJN+JERW73kNLvhBhawgAUsYAELWMACFrCABSxgAQtYwAIW-->
+<!--sIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1g5K7jiPh7TPh4RlxZYwAIW-->
+<!--sIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCA-->
+<!--BSxgaQYWHnFM1SXfhujvNLCABSxgAQtYNAEWsIAFLI8AFrAELGABC1jAogmwgAUsYHkEsIAlYAEL-->
+<!--WMACFrCABSxgAcsjgAUsAQtYwKoA69nRgdsTsdVUbVphwo8EFrCABSxgAQtYwAIWsIAFLGABC1jA-->
+<!--AhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWJd+8Zsv73qdcrnj8xMx-->
+<!--F91nASxgAQtYwAIWsIAFLGABC1jAAhawgGVIgAUsYAELWMACFrCABSxgAQtYhgRYwAIWsIAFLGAB-->
+<!--C1jAAhawgGVIgAWsU9vqLWDhLGZ+4YAFLGA5C2ABy5AAC1jAApYhARawgAUsYDkLYAHLkAALWMAC-->
+<!--liEBFrCABSxgOQtgAcuQAAtYwAIWsIAFLGABC1jOAljA8hbv3eCIR/jCXf8+ActbAMuFAZZRBxaw-->
+<!--gAUsYAELWMAClrcAlgsDLKMOLGABC1juH7CABSxgeQtgAQtYRh1YwAIWsNw/YAELWE7OWwALWMAy-->
+<!--6sMux5K3iNiHiGt/MWABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUs-->
+<!--YAELWMACFrCABSxgAQtYwAIWsIA15+UrpihiozpEW3JYk08TWMACFrCABSxgAQtYwAIWsIAFLGAB-->
+<!--C1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAWsHWB1NGEfOi5oxFl07EO0-->
+<!--R8ACFrCABSxgAQtYwAIWsIAFLGABC1jAAhawgAUsYAELWMACFrCABSxgAQtYwAIWsIAFLGABC1jA-->
+<!--AhawgAUsYO0AS5LOByxJwJIkYEkCliQBS5KAJQlYkgQsSQKWJGBJErAkCViSgCVJwJIkYEkCliQB-->
+<!--S5KAJampfxyQa9Xg9HgVAAAAAElFTkSuQmCC" id="code"/>-->
+				</div>
+				<div class="code_save">
+					<small>保存收款码</small>
+				</div>
+			</div>
+			<div class="code_ico">
+				<div class="code_icon">
+					<img src="img/qq.svg" th:src="@{img/qq.svg}"/>
+					<p>QQ钱包</p>
+				</div>
+				<div class="code_icon">
+					<img src="img/wechat.svg" th:src="@{img/wechat.svg}"/>
+					<p>微信</p>
+				</div>
+				<div class="code_icon">
+					<img src="img/alipay.svg" th:src="@{img/alipay.svg}"/>
+					<p>支付宝</p>
+				</div>
+			</div>
+			<div class="code_bottom">孤城落寞收款码</div>
+			<div class="code_pick">
+				<img src="img/chuo.svg" th:src="@{img/chuo.svg}"/>
+		</div>
+	</div>
+	<!--弹窗-->
+		<div class="popup_window">
+			<h3 class="tital">选择自己喜欢的颜色搭配</h3>
+			<h3 class="bgColor">点我切换背景色</h3>
+			<div class="switchColor item_1">
+				<ul>
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+					<li>6</li>
+					<li>7</li>
+					<li>8</li>
+					<li>9</li>
+				</ul>
+			</div>
+			<h3 class="bottomColor">点我切换底部颜色</h3>
+			<div class="switchColor item_2">
+				<ul>
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+				</ul>
+			</div>
+			<h3 class="wordColor">点我切换底部文字颜色</h3>
+			<div class="switchColor item_3">
+				<ul>
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+				</ul>
+			</div>
+			<div style="height: 72px;"></div>
+			<div class="popup_bottom">
+				<h3>关闭</h3>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js" th:src="@{webjars/jquery/jquery.min.js}" ></script>
+	<!--<script type="text/javascript" src="js/jquery-3.3.1.min.js" th:src="@{js/jquery-3.3.1.min.js}" ></script>-->
+	<script type="text/javascript" src="js/payment.js" th:src="@{js/payment.js}"></script>
+	<script type="text/javascript" src="js/alipay.js"  th:src="@{js/alipay.js}"></script>
+	<script type="text/javascript" src="js/alipay.js"  th:src="@{js/qr.js}"></script>
+</body>
+</html>

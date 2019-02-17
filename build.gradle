@@ -1,0 +1,70 @@
+buildscript {
+    ext {
+        springBootVersion = '2.1.2.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+plugins {
+    id 'java'
+    id 'idea'
+    id "org.springframework.boot" version "2.1.2.RELEASE"
+    id "io.spring.dependency-management" version "1.0.6.RELEASE"
+}
+
+group = 'club.gclmit'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenLocal()
+    maven{url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+    maven{url 'https://mvnrepository.com/'}
+    mavenCentral()
+}
+
+dependencies {
+    // spring 官方组件包
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+//    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    runtimeOnly 'com.h2database:h2'
+
+    //mybatis-plus 组件
+//    compile group: 'org.apache.velocity', name: 'velocity-engine-core', version: '2.0'
+//    compile group: 'com.baomidou', name: 'mybatis-plus-generator', version: '3.0.4'
+//    compile group: 'com.baomidou', name: 'mybatis-plus-boot-starter', version: '3.0.7.1'
+
+    //UserAgent 工具类
+//    compile group: 'eu.bitwalker', name: 'UserAgentUtils', version: '1.21'
+
+    // JSON 处理工具类
+    compile group: 'com.alibaba', name: 'fastjson', version: '1.2.56'
+
+    //加密工具类
+    compile group: 'com.github.ulisesbocchio', name: 'jasypt-spring-boot-starter', version: '2.1.1'
+
+    //二维码识别
+    compile group: 'com.google.zxing', name: 'core', version: '3.3.3'
+    compile group: 'com.google.zxing', name: 'javase', version: '3.3.3'
+
+    // lombok 组件
+    annotationProcessor 'org.projectlombok:lombok:1.18.4'
+    compileOnly 'org.projectlombok:lombok:1.18.4'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.4'
+    testCompileOnly 'org.projectlombok:lombok:1.18.4'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // 前端 webJars 统一版本管理
+    compile 'org.webjars:jquery:3.3.1-2'
+    // 忽略版本号
+    compile group: 'org.webjars', name: 'webjars-locator', version: '0.36'
+
+}

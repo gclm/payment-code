@@ -1,0 +1,85 @@
+#数据源配置
+spring:
+  datasource:
+    url: jdbc:h2:./src/main/resources/db/payment-code;AUTO_SERVER=TRUE;DB_CLOSE_ON_EXIT=FALSE;TRACE_LEVEL_SYSTEM_OUT=2
+#    file:./payment-code; 表示在项目根路径下保存数据库文件，数据库的名称为payment-code，
+#    DB_CLOSE_ON_EXIT 当虚拟机退出时并不关闭数据库
+#    DB_CLOSE_DELAY：要求最后一个正在连接的连接断开后，不要关闭数据库
+#    MODE=MySQL：兼容模式，H2兼容多种数据库，该值可以为：DB2、Derby、HSQLDB、MSSQLServer、MySQL、Oracle、PostgreSQL
+#    AUTO_RECONNECT=TRUE：连接丢失后自动重新连接
+#    AUTO_SERVER=TRUE：启动自动混合模式，允许开启多个连接，该参数不支持在内存中运行模式
+#    TRACE_LEVEL_SYSTEM_OUT、TRACE_LEVEL_FILE：输出跟踪日志到控制台或文件， 取值0为OFF，1为ERROR（默认值），2为INFO，3为DEBUG
+#    SET TRACE_MAX_FILE_SIZE mb：设置跟踪日志文件的大小，默认为16M
+    username: gclm
+    password: gclm
+    driver-class-name: org.h2.Driver
+#    schema: classpath:db/schema.sql
+#    data: classpath:db/data.sql
+
+# jpa 配置
+  jpa:
+    database: h2
+    hibernate:
+      # 自动生成SQL
+      ddl-auto: update
+    properties:
+      hibernate:
+        # 控制台是否打印
+        format_sql: true
+        # 格式化sql语句
+        show_sql: true
+        # 指出是什么操作生成了该语句
+        use_sql_comments: false
+
+  # H2数据库配置
+  h2:
+    console:
+      #配置访问地址
+      path: /h2-console
+      settings:
+        #配置能远程访问
+        web-allow-others: true
+        # 是否跟踪输出日志，默认false
+        trace:  false
+      #配置项目启动 h2就启动
+      enabled: true
+
+# 模板引擎配置
+  thymeleaf:
+    # 禁用缓存
+    cache: false
+
+server:
+#  springboot 上传文件配置
+  multipart:
+    enabled: true
+    #location: roy-upload-tmp
+    max-file-size: 5MB
+    max-request-size: 5MB
+
+# Mybatis plus 配置
+mybatis-plus:
+  #mapper-locations: classpath:/mapper/*Mapper.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  #typeAliasesPackage: com.baomidou.springboot.entity
+  #typeEnumsPackage: com.baomidou.springboot.entity.enums
+  global-config:
+    # 数据库相关配置
+    db-config:
+      #主键类型  AUTO:"数据库ID自增", INPUT:"用户输入ID",ID_WORKER:"全局唯一ID (数字类型唯一ID)", UUID:"全局唯一ID UUID";
+      #字段策略 IGNORED:"忽略判断",NOT_NULL:"非 NULL 判断"),NOT_EMPTY:"非空判断"
+      field-strategy: not_empty
+      #驼峰下划线转换
+      column-underline: true
+      #数据库大写下划线转换
+      capital-mode: true
+      #逻辑删除配置
+      #logic-delete-value: 0
+      #logic-not-delete-value: 1
+      db-type: h2
+    #刷新mapper 调试神器
+    refresh: true
+  # 原生配置
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false

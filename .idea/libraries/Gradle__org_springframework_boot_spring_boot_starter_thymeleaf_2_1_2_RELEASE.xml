@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.boot:spring-boot-starter-thymeleaf:2.1.2.RELEASE">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../../Softwares/Tools/apache-maven-3.6.0/maven_repository/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-thymeleaf/2.1.2.RELEASE/13106a94115629b067d0d87ed86f83ff626ee1d3/spring-boot-starter-thymeleaf-2.1.2.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

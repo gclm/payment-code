@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.webjars:jquery:3.3.1-2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../../Softwares/Tools/apache-maven-3.6.0/maven_repository/caches/modules-2/files-2.1/org.webjars/jquery/3.3.1-2/1afcb22bc82b182b6e574284b8fc9ef56fab7a6/jquery-3.3.1-2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../../../Softwares/Tools/apache-maven-3.6.0/maven_repository/caches/modules-2/files-2.1/org.webjars/jquery/3.3.1-2/dd984a01ae28c522fb15e413570b5c201e01bb40/jquery-3.3.1-2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

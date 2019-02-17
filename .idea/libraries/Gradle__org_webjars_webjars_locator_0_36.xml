@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.webjars:webjars-locator:0.36">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../../Softwares/Tools/apache-maven-3.6.0/maven_repository/caches/modules-2/files-2.1/org.webjars/webjars-locator/0.36/dff184f3a0b0698913e5e393c04ffb4c25f24937/webjars-locator-0.36.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../../../Softwares/Tools/apache-maven-3.6.0/maven_repository/caches/modules-2/files-2.1/org.webjars/webjars-locator/0.36/28fb336750aa65b8c277899381b42b109caffdbc/webjars-locator-0.36-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

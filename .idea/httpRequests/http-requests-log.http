@@ -1,0 +1,18 @@
+GET http://localhost:8080/hello
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/hello
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/hello
+Accept: */*
+Cache-Control: no-cache
+
+###
+
