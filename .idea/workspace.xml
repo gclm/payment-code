@@ -2,29 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91538da3-f9a6-496f-9567-bfeced36b509" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/favicon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/db/payment-code.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/db/payment-code.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/img/code.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/code/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/code/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/club/gclmit/payment/qr/controller/PaymentCodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/club/gclmit/payment/qr/controller/PaymentCodeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/club/gclmit/payment/qr/utils/QrCodeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/club/gclmit/payment/qr/utils/QrCodeUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/payment-code.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/payment-code.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/code.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/code/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/code/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/club/gclmit/payment/qr/other/StringUtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/club/gclmit/payment/qr/other/StringUtilTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -212,101 +196,13 @@
             <path>
               <item name="payment-code" type="b2602c69:ProjectViewProjectNode" />
               <item name="payment-code" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="payment-code" type="b2602c69:ProjectViewProjectNode" />
               <item name="payment-code" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="payment-code" type="b2602c69:ProjectViewProjectNode" />
-              <item name="payment-code" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="payment-code" type="b2602c69:ProjectViewProjectNode" />
-              <item name="payment-code" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="qr" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="payment-code" type="b2602c69:ProjectViewProjectNode" />
-              <item name="payment-code" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="qr" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="payment-code" type="b2602c69:ProjectViewProjectNode" />
-              <item name="payment-code" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="qr" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="payment-code" type="b2602c69:ProjectViewProjectNode" />
-              <item name="payment-code" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="payment-code" type="b2602c69:ProjectViewProjectNode" />
-              <item name="payment-code" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="payment-code" type="b2602c69:ProjectViewProjectNode" />
-              <item name="payment-code" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="payment-code" type="b2602c69:ProjectViewProjectNode" />
-              <item name="payment-code" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="payment-code" type="b2602c69:ProjectViewProjectNode" />
-              <item name="payment-code" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="qr" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="payment-code" type="b2602c69:ProjectViewProjectNode" />
-              <item name="payment-code" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="qr" type="462c0819:PsiDirectoryNode" />
-              <item name="other" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="payment-code" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="payment-code" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Gradle: org.springframework:spring-webmvc:5.1.4.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="libs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -500,7 +396,7 @@
       <workItem from="1550373006069" duration="5319000" />
       <workItem from="1550390463088" duration="195000" />
       <workItem from="1550390712681" duration="4538000" />
-      <workItem from="1550448309312" duration="20021000" />
+      <workItem from="1550448309312" duration="20268000" />
     </task>
     <servers />
   </component>
@@ -537,12 +433,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137816000" />
+    <option name="totallyTimeSpent" value="138063000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="968" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49916804" visible="true" weight="0.33102345" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49916804" visible="true" weight="0.33102345" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="JRebel" order="3" sideWeight="0.50083196" side_tool="true" weight="0.21748401" />
@@ -556,15 +452,15 @@
       <window_info anchor="bottom" id="Java Enterprise" order="3" />
       <window_info anchor="bottom" id="JRebel Executor" order="4" sideWeight="0.49840087" weight="0.55136985" />
       <window_info anchor="bottom" id="Message" order="5" />
-      <window_info active="true" anchor="bottom" id="Find" order="6" visible="true" weight="0.64726025" />
-      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.4989339" weight="0.2739726" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.61415523" />
+      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.4989339" visible="true" weight="0.5125571" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.43493152" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="11" weight="0.32954547" />
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="bottom" id="Build" order="13" weight="0.55365294" />
-      <window_info anchor="bottom" id="Terminal" order="14" weight="0.3413242" />
+      <window_info anchor="bottom" id="Terminal" order="14" weight="0.37671232" />
       <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="16" sideWeight="0.50159913" side_tool="true" weight="0.55136985" />
       <window_info anchor="bottom" id="Database Changes" order="17" />
@@ -580,7 +476,7 @@
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Mybatis datasource" order="5" side_tool="true" />
       <window_info anchor="right" id="Key Promoter X" order="6" />
-      <window_info anchor="right" id="Gradle" order="7" weight="0.32995737" />
+      <window_info anchor="right" id="Gradle" order="7" visible="true" weight="0.32995737" />
       <window_info anchor="right" id="Database" order="8" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info anchor="right" id="Bean Validation" order="10" weight="0.32995737" />
