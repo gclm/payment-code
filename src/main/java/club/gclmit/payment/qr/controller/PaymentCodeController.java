@@ -129,8 +129,9 @@ public class PaymentCodeController {
     @PostMapping
     public Result generatePaymentCode(@RequestBody JSONObject jsonParms, HttpServletRequest request) throws IOException, WriterException {
 
-        String hostUrl = new StringBuilder().append("http://").append(request.getHeader("Host"))
-                .append(request.getServletPath()).toString();
+        String hostUrl = request.getRequestURL().toString();
+
+        log.info("当前浏览器路径："+hostUrl);
 
         System.out.println(jsonParms.toJSONString());
 

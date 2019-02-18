@@ -48,6 +48,11 @@ spring:
   thymeleaf:
     # 禁用缓存
     cache: false
+# 自定义ico
+  mvc:
+    favicon:
+      enabled: false
+
 
 server:
 #  springboot 上传文件配置

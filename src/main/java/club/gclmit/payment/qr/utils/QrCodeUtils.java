@@ -7,9 +7,9 @@ import com.google.zxing.common.HybridBinarizer;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 import lombok.*;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.tomcat.util.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import sun.misc.BASE64Encoder;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -177,8 +177,7 @@ public class QrCodeUtils {
              *
              */
             byte[] bytes = outputStream.toByteArray();
-            BASE64Encoder encoder = new BASE64Encoder();
-            return encoder.encodeBuffer(bytes).trim();
+            return new String(Base64.encodeBase64(bytes)).trim();
         }
     }
 
