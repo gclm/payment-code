@@ -4,6 +4,7 @@ import club.gclmit.payment.qr.dao.UserDao;
 import club.gclmit.payment.qr.model.entity.User;
 import club.gclmit.payment.qr.service.UserService;
 import club.gclmit.payment.qr.utils.IdWorker;
+import club.gclmit.payment.qr.utils.ObjectOperationUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -30,10 +31,17 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private IdWorker idWorker;
 
+    @Autowired
+    ObjectOperationUtils objectOperationUtils;
+
     @Override
     public User insertUser(User user) {
-        user.setId(idWorker.nextId()+"");
-        return userDao.save(user);
+        User findUser = userDao.findUserByEmailOrUsername(user.getEmail(), user.getUsername());
+        if(objectOperationUtils.isEmpty(findUser)){
+            user.setId(idWorker.nextId()+"");
+            return userDao.save(user);
+        }
+        return null;
     }
 
     @Override
@@ -47,7 +55,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User selectUserById(String id) {
-        return userDao.getOne(id);
+        return userDao.findUserById(id);
     }
 
     @Override

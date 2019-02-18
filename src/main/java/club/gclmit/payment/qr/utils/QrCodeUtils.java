@@ -34,7 +34,7 @@ import java.util.Map;
 public class QrCodeUtils {
 
     @Autowired
-    private ObjectIsNullUtils objectIsNullUtils;
+    private ObjectOperationUtils objectOperationUtils;
 
     @Autowired
     private FileConversionUtil fileConversionUtil;
@@ -75,11 +75,11 @@ public class QrCodeUtils {
          *        .read(InputStream input) 读取读取输入流
          *        .read(ImageInputStream stream) 读取图片输入流
          */
-        if (QrCodeType.NET_QR_CODE.getDesc().equals(qrCodeType) && !objectIsNullUtils.isEmpty(content)){
+        if (QrCodeType.NET_QR_CODE.getDesc().equals(qrCodeType) && !objectOperationUtils.isEmpty(content)){
             log.info("NET_QR_CODE content类型："+content.getClass());
             URL url = new URL((String) content);
             bufferedImage = ImageIO.read(url);
-        } else if (QrCodeType.LOCAL_QR_CODE.getDesc().equals(qrCodeType) && !objectIsNullUtils.isEmpty(content)){
+        } else if (QrCodeType.LOCAL_QR_CODE.getDesc().equals(qrCodeType) && !objectOperationUtils.isEmpty(content)){
             log.info("LOCAL_QR_CODE content类型："+content.getClass());
             bufferedImage = ImageIO.read((File)content);
         } else {

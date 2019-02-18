@@ -9,15 +9,14 @@ $(document).ready(function () {
 
     $(".key_btn").click(function(){
 
-        var aliPay = $("#alipay").val();
-        var qqPay = $("#qq").val();
-        var weixinPay = $("#weixin").val();
+        var aliPay = $("#alipayPaymentCode").val();
+        var qqPay = $("#qqPaymentCode").val();
+        var weixinPay = $("#weixinPaymentCode").val();
         var username = $("#username").val();
 
-        console.log("alipay="+aliPay+"\nqqPay="+qqPay+"\nweixinPay="+weixinPay+"\nusername"+username)
+        // console.log("alipay="+aliPay+"\nqqPay="+qqPay+"\nweixinPay="+weixinPay+"\nusername"+username)
 
         if (judgePayCode(aliPay)  && judgePayCode(qqPay) && judgePayCode(weixinPay) && judgePayCode(username)){
-            // console.log("zxzxc")
 
             $.ajax({
                 type: "POST",
@@ -28,27 +27,24 @@ $(document).ready(function () {
                 cache: false,
                 timeout: 600000,
                 success: function (data) {
-                    console.log("SUCCESS : ",data);
+                    // console.log("SUCCESS : ",data);
                     var newData = JSON.stringify(data);
                     newData = eval("("+newData+")");
-                    var code = newData.data.code;
-                    var username = newData.data.username;
 
-                    console.log(username+" "+code)
+                    if(true == newData.flag){
+                        var code = newData.data.code;
+                        var username = newData.data.username;
 
-                    // 执行赋值操作
-                    $("#name").text(username);
-                    $("#code").attr("src",code);
-                    // $("#code").setAttribute("src",code);
+                        // 执行赋值操作
+                        $("#name").text(username);
+                        $("#code").attr("src",code);
 
-                    //打开模态框
-                    $(".alipay_popup").show();
-                    $(".alipay_code").animate({top:"32px"});
-                },
-                error: function (error) {
-                    // $("#result").text(e.responseText);
-                    console.log("ERROR : ", error);
-                    // $("#btnSubmit").prop("disabled", false);
+                        //打开模态框
+                        $(".alipay_popup").show();
+                        $(".alipay_code").animate({top:"32px"});
+                    } else{
+                        alert(newData.message);
+                    }
                 }
             });
         }else {

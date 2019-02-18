@@ -25,7 +25,7 @@ import javax.validation.constraints.Size;
 @Entity
 @Table(name = "pay_user")
 @AllArgsConstructor(access = AccessLevel.PUBLIC)
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor(access = AccessLevel.PUBLIC)
 public class User {
 
     /**

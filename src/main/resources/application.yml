@@ -1,7 +1,7 @@
 #数据源配置
 spring:
   datasource:
-    url: jdbc:h2:./src/main/resources/db/payment-code;AUTO_SERVER=TRUE;DB_CLOSE_ON_EXIT=FALSE;TRACE_LEVEL_SYSTEM_OUT=2
+    url: jdbc:h2:./src/main/resources/db/payment-code;AUTO_SERVER=TRUE;DB_CLOSE_ON_EXIT=FALSE;MODE=MySQL
 #    file:./payment-code; 表示在项目根路径下保存数据库文件，数据库的名称为payment-code，
 #    DB_CLOSE_ON_EXIT 当虚拟机退出时并不关闭数据库
 #    DB_CLOSE_DELAY：要求最后一个正在连接的连接断开后，不要关闭数据库

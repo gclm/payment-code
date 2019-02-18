@@ -31,4 +31,21 @@ public interface UserDao extends JpaRepository<User,String>, JpaSpecificationExe
      * 根据账号查找用户
      */
     User findUserByUsername(String username);
+
+    /**
+     * 根据账户或邮箱查找用户
+     * @details 孤城落寞 2019-02-17 17:03
+     * @param email
+     * @param username
+     * @return
+     */
+    User findUserByEmailOrUsername(String email,String username);
+
+    /**
+     * 根绝 Id 查询用户
+     * @details 孤城落寞 2019-02-17 17:10
+     * @param id
+     * @return
+     */
+    User findUserById(String id);
 }

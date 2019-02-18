@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>孤城落寞万能收款码</title>
+</head>
+<body>
+    <script th:inline="javascript">
+        window.location.href = [[${paymentCode.code}]];
+    </script>
+</body>
+</html>

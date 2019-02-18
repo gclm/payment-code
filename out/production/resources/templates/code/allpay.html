@@ -8,14 +8,14 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<link rel="stylesheet" href="css/allpay.css" th:href="@{../css/allpay.css}" />
 	<link rel="stylesheet" href="//at.alicdn.com/t/font_758041_cf4may8xj9.css" th:href="@{//at.alicdn.com/t/font_758041_cf4may8xj9.css}"> <!-- 引入阿里图标库css -->
-	<title>收款码</title>
+	<title>孤城落寞万能收款码</title>
 </head>
 <body>
 	<div class="code">
 		<h2>扫码向<span th:text="${paymentCode?.username}" th:if="${paymentCode?.username} != null"></span>付款</h2>
 		<div class="code_img">
 			<div class="code_save">
-				<small style="color: #000;">无需加好友，扫一扫向我付钱</small>
+				<small style="color: #000;">微信、QQ用户需要长按识别付款二维码</small>
 			</div>
 			<div>
 				<img src="img/code.png" th:src="${paymentCode?.code}" th:if="${paymentCode?.code} != null"/>
@@ -26,19 +26,19 @@
 		</div>
 		<div class="code_ico">
 			<div class="code_icon">
-				<img src="img/qq.svg" th:src="@{../img/qq_ico.svg}" />
+				<img src="img/qq.svg" th:src="@{../img/qq.svg}" />
 				<p>QQ钱包</p>
 			</div>
 			<div class="code_icon">
-				<img src="img/微信.svg" th:src="@{../img/wechat_ico.svg}"/>
+				<img src="img/微信.svg" th:src="@{../img/wechat.svg}"/>
 				<p>微信</p>
 			</div>
 			<div class="code_icon">
-				<img src="img/支付宝.svg" th:src="@{../img/alipay_ico.svg}"/>
+				<img src="img/支付宝.svg" th:src="@{../img/alipay.svg}"/>
 				<p>支付宝</p>
 			</div>
 		</div>
-		<div class="code_bottom">收款啦</div>
+		<div class="code_bottom">孤城落寞收款码</div>
 	</div>
 </body>
 </html>

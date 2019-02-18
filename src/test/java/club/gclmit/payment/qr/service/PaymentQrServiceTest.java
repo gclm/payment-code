@@ -1,5 +1,6 @@
 package club.gclmit.payment.qr.service;
 
+import club.gclmit.payment.qr.model.entity.PaymentCode;
 import com.google.zxing.NotFoundException;
 import com.google.zxing.WriterException;
 import lombok.extern.slf4j.Slf4j;
@@ -11,6 +12,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 
 /**
  * Copyright (C), 2016-2018, 孤城落寞的博客
@@ -29,10 +31,14 @@ public class PaymentQrServiceTest {
     private PaymentCodeService paymentCodeService;
 
     @Test
-    public void parseQRCodeTest() throws NoSuchFieldException, IllegalAccessException, NotFoundException, IOException {
-        File file = new File("/Volumes/Downloads/1096299306660532224.png");
-        String[] strings = paymentCodeService.parsePaymentCode(file, "12346");
-        log.info("\nservice: "+strings[0]+" "+strings[1]);
+    public void parseQRCodeTest() throws NoSuchFieldException, IllegalAccessException, NotFoundException, IOException, InvocationTargetException, NoSuchMethodException {
+        File file = new File("/Volumes/Downloads/XXXX/YYY/1096951025811722241.png");
+        String[] strings = paymentCodeService.parsePaymentCode(file,"1097333658886475777");
+        if(strings[0] != null){
+            log.info("\nservice: "+strings[0]+" "+strings[1]+" "+strings[2]);
+        }else{
+            log.info("\nservice: "+strings[0]);
+        }
     }
 
     @Test

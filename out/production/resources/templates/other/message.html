@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <h2>这是一个消息界面</h2>
+   <script th:inline="javascript">
+       var message = [[${paymentCode.message}]];
+       console.log("y:"+message);
+   </script>
+   <input type="text" id="path" th:value="${paymentCode.message}">
+   <span th:text="${paymentCode.message}"></span>
+   <script type="text/javascript" src="js/jquery-3.3.1.min.js" th:src="@{../../webjars/jquery/jquery.min.js}" ></script>
+</body>
+</html>

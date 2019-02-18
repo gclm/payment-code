@@ -16,20 +16,15 @@ import org.springframework.data.jpa.repository.Query;
 public interface PaymentCodeDao extends JpaRepository<PaymentCode,String>, JpaSpecificationExecutor<PaymentCode> {
 
     /**
-     * 通过用户id 查询 PaymentQr
-     * @details 孤城落寞 2019-02-14 11:10
-     * @param userId 用户id
-     * @return
-     */
-    PaymentCode findPaymentCodeByUserId(String userId);
-
-    /**
-     * 通过用户id 查询 PaymentQr
+     * 通过 付款码Id 查询 PaymentQr
      * @details 孤城落寞 2019-02-14 11:10
      * @param id id
      * @return
      */
     PaymentCode findPaymentCodeById(String id);
+
+    @Query(value = "SELECT * FROM pay_code WHERE alipay_payment_code = ? OR  qq_payment_code = ? OR  weixin_payment_code = ?",nativeQuery = true)
+    PaymentCode findPaymentCodeBySimpleondition(String aliPay,String qqPay,String weixinPay);
 
     /**
      * 通过 QQ 微信 支付宝 获取 PaymentQr

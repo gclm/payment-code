@@ -49,23 +49,24 @@
 		</div>
 		<div class="drop_code" oncopy="return false;" oncut="return false;" onselectstart="return false">
 			<div class="code">
-				<input type="text" id="alipay"  value="https://qr.alipay.com/fkx08534olrnqznrblftka9" placeholder="支付宝收款码" readonly="readonly"/>
-				<!--<input type="text" id="alipay"  placeholder="支付宝收款码" readonly="readonly"/>-->
+				<!--<input type="text" id="alipay"  value="https://qr.alipay.com/fkx08534olrnqznrblftka9" placeholder="支付宝收款码" readonly="readonly"/>-->
+				<input type="text" id="alipayPaymentCode"  placeholder="支付宝收款码" readonly="readonly"/>
 				<i class="iconfont">&#xe600;</i>
 			</div>
 			<div class="code">
-				<input type="text" id="qq" value="https://i.qianbao.qq.com/wallet/sqrcode.htm?m=tenpay&f=wallet&a=1&ac=F841F5F321D1E476DAAB7EE1300BD900B0315F26C1685FD0A8B4066FC355070E&u=2512433168&n=%E5%8D%83%E9%87%8C%E4%B8%8D%E5%94%BE%E4%BA%95" placeholder="QQ收款码" readonly="readonly"/>
-				<!--<input type="text" id="qq" placeholder="QQ收款码" readonly="readonly"/>-->
+				<!--<input type="text" id="qq" value="https://i.qianbao.qq.com/wallet/sqrcode.htm?m=tenpay&f=wallet&a=1&ac=F841F5F321D1E476DAAB7EE1300BD900B0315F26C1685FD0A8B4066FC355070E&u=2512433168&n=%E5%8D%83%E9%87%8C%E4%B8%8D%E5%94%BE%E4%BA%95" placeholder="QQ收款码" readonly="readonly"/>-->
+				<input type="text" id="qqPaymentCode" placeholder="QQ收款码" readonly="readonly"/>
 				<i class="iconfont">&#xe600;</i>
 			</div>
 			<div class="code">
-				<input type="text" id="weixin" value="wxp://f2f093w94HieH-Oc3wpXkwlwosryb0vAYl8m" placeholder="微信收款码" readonly="readonly"/>
-				<!--<input type="text" id="weixin" placeholder="微信收款码" readonly="readonly"/>-->
+				<!--<input type="text" id="weixin" value="wxp://f2f093w94HieH-Oc3wpXkwlwosryb0vAYl8m" placeholder="微信收款码" readonly="readonly"/>-->
+				<input type="text" id="weixinPaymentCode" placeholder="微信收款码" readonly="readonly"/>
 				<i class="iconfont">&#xe600;</i>
 			</div>
 			<div class="code_name">
-				<input type="text"  id="username" value="XXXX" placeholder="请输入收款人昵称"/>
-				<!--<input type="text"  id="username" placeholder="请输入收款人昵称"/>-->
+				<input type = "hidden" id="codeId">
+				<!--<input type="text"  id="username" value="XXXX" placeholder="请输入收款人昵称"/>-->
+				<input type="text"  id="username" placeholder="请输入收款人昵称"/>
 			</div>
 		</div>
 		<div class="key_btn">

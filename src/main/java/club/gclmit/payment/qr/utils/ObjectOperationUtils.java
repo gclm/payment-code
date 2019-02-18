@@ -5,6 +5,8 @@ import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.net.URL;
 import java.util.Collection;
@@ -21,7 +23,7 @@ import java.util.Map;
  */
 @Slf4j
 @Component
-public class ObjectIsNullUtils {
+public class ObjectOperationUtils {
 
     /**
      * 判断一个对象的 所有属性是否为空
@@ -69,7 +71,9 @@ public class ObjectIsNullUtils {
      */
     public boolean objectSingleFieldIsNull(Object object,String fieldName) throws NoSuchFieldException, IllegalAccessException {
 
-        Field field = object.getClass().getDeclaredField(fieldName.toString());
+        log.info("对象："+object+"属性名："+fieldName);
+
+        Field field = object.getClass().getDeclaredField(fieldName);
 
         field.setAccessible(true);
 
@@ -80,6 +84,32 @@ public class ObjectIsNullUtils {
 
         field.setAccessible(false);
         return true;
+    }
+
+
+    public Object setObjectField(Object bean,String fieldName,String fieldValue) throws NoSuchFieldException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+
+        Class<?> beanClass = bean.getClass();
+
+        Field field = beanClass.getDeclaredField(fieldName);
+
+        field.setAccessible(true);
+
+        /**
+         * 首字母转换成大写
+         */
+        char[] cs = fieldName.toCharArray();
+        cs[0]  -= 32;
+
+        String fieldMethodName = new StringBuilder("set").append(String.valueOf(cs)).toString();
+
+        Method method = beanClass.getDeclaredMethod(fieldMethodName, field.getType());
+
+        method.invoke(bean,fieldValue);
+
+        field.setAccessible(true);
+
+        return bean;
     }
 
 
@@ -112,4 +142,7 @@ public class ObjectIsNullUtils {
         }
         return false;
     }
+
+
+
 }

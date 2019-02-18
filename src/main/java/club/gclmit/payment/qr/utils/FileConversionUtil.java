@@ -61,9 +61,9 @@ public class FileConversionUtil {
      */
     public File judgeFileExists(String path) throws IOException {
 
-        ObjectIsNullUtils objectIsNullUtils = new ObjectIsNullUtils();
+        ObjectOperationUtils objectOperationUtils = new ObjectOperationUtils();
 
-        if (!objectIsNullUtils.isEmpty(path)){
+        if (!objectOperationUtils.isEmpty(path)){
 
             File file = new File(path);
             //            log.info("父目录："+file.getParent());

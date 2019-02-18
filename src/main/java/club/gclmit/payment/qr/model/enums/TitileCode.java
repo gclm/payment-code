@@ -32,9 +32,11 @@ public enum TitileCode {
 
 
     /**
-     * QQ/TIM 验证码 vac.qq.com
+     * QQ/TIM 验证码 i.qianbao.qq.com/vac.qq.com
      */
-    QQ_JUDGE_CODE("vac.qq.com"),
+    TIM_JUDGE_CODE("vac.qq.com"),
+
+    QQ_JUDGE_CODE("i.qianbao.qq.com"),
 
     /**
      * 微信验证码 wxp

@@ -33,12 +33,6 @@ public class PaymentCode {
     private String id;
 
     /**
-     * 用户 id
-     */
-    @Column(nullable = false,length = 50,name = "user_id")
-    private String userId;
-
-    /**
      * 二维码上名字
      */
     @Column(length = 100)
@@ -66,5 +60,5 @@ public class PaymentCode {
      * 聚合码
      */
     @Column(length = 255,name = "payment_code")
-    private String PaymentCode;
+    private String paymentCode;
 }

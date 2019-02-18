@@ -10,13 +10,24 @@ package club.gclmit.payment.qr.model.dto;
  */
 public class PaymentCodeDto {
 
+    private String id;
+
     private String title;
 
     private String value;
 
-    public PaymentCodeDto(String title, String value) {
+    public PaymentCodeDto(String id, String title, String value) {
+        this.id = id;
         this.title = title;
         this.value = value;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getTitle() {

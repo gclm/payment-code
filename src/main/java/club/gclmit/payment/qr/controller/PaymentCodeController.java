@@ -6,7 +6,7 @@ import club.gclmit.payment.qr.model.enums.StatusCode;
 import club.gclmit.payment.qr.model.result.Result;
 import club.gclmit.payment.qr.service.PaymentCodeService;
 import club.gclmit.payment.qr.utils.FileConversionUtil;
-import club.gclmit.payment.qr.utils.ObjectIsNullUtils;
+import club.gclmit.payment.qr.utils.ObjectOperationUtils;
 import com.alibaba.fastjson.JSONObject;
 import com.google.zxing.NotFoundException;
 import com.google.zxing.WriterException;
@@ -23,6 +23,7 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 
 /**
  * Copyright (C), 2016-2018, 孤城落寞的博客
@@ -44,7 +45,7 @@ public class PaymentCodeController {
     private FileConversionUtil fileConversionUtil;
 
     @Autowired
-    private ObjectIsNullUtils objectIsNullUtils;
+    private ObjectOperationUtils objectOperationUtils;
 
     /**
      * 付款链接请求
@@ -62,51 +63,68 @@ public class PaymentCodeController {
 
         String[] result = paymentCodeService.scanPaymentCode(userAgentToString, id);
 
-        log.info("result null :"+result[0]);
-        if (!objectIsNullUtils.isEmpty(result[0])){
-            model.addAttribute("code",new StringBuilder().append("data:image/png;base64,").append(result[0]).toString());
-            model.addAttribute("username",result[1]);
-            return new ModelAndView("allpay","paymentCode",model);
+//        log.info("result :"+result[0]);
+        if (!objectOperationUtils.isEmpty(result[0])){
+            if("alipay".equals(result[2])){
+                model.addAttribute("code",result[0]);
+                return new ModelAndView("other/jump","paymentCode",model);
+            } else {
+                model.addAttribute("code",new StringBuilder().append("data:image/png;base64,").append(result[0]).toString());
+                model.addAttribute("username",result[1]);
+            }
+            return new ModelAndView("code/allpay","paymentCode",model);
         }
         model.addAttribute("message","二维码调用失败，不存在该聚合付款码！！！！！");
-        return new ModelAndView("message","paymentCode",model);
+        return new ModelAndView("other/message","paymentCode",model);
     }
 
+
+    /**
+     * 前往首页
+     * @details 孤城落寞 2019-02-17 16:51
+     * @return
+     */
     @GetMapping
     public String goHome(){
-        return "index";
+        return "code/index";
     }
+
 
     /**
      * 解析二维码
      * @details 孤城落寞 2019-02-13 21:45
      * @param multipartFile 上传的文件
-     * @param id 用户ID
      * @return club.gclmit.payment.qr.model.result.Result
      */
     @ResponseBody
     @PostMapping("/parse")
     public Result parsePaymentCode(@RequestParam(value = "file" ,required = true) MultipartFile multipartFile,
-                             @RequestParam(required = true) String id) throws IOException, IllegalAccessException, NoSuchFieldException, NotFoundException {
+                                   @RequestParam String id) throws IOException, IllegalAccessException, NoSuchFieldException, NotFoundException, InvocationTargetException, NoSuchMethodException {
 
-        log.debug("file: "+multipartFile.getSize()+" id: "+id);
+        log.info("file: "+multipartFile.getSize()+"id: "+id);
 
-        if(multipartFile.isEmpty()){
-            return new Result(false, StatusCode.UPLOAD_FILE_ERROR,"二维码解析失败，上传的文件为空");
+        if(!multipartFile.isEmpty()){
+
+            File file = fileConversionUtil.multipartFileToFile(multipartFile);
+
+            String[] results = paymentCodeService.parsePaymentCode(file,id);
+
+            if(!objectOperationUtils.isEmpty(results[0])){
+                fileConversionUtil.deleteFile(file);
+                return new Result(true,StatusCode.PARSE_QR_OK,"二维码解析成功",new PaymentCodeDto(results[2],results[1],results[0]));
+            }
+            return new Result(false, StatusCode.PARSE_QR_ERROR,"二维码解析失败，二维码内容为空");
         }
-
-        File file = fileConversionUtil.multipartFileToFile(multipartFile);
-
-        String[] results = paymentCodeService.parsePaymentCode(file, id);
-
-        if(!StringUtils.isEmpty(results)){
-            fileConversionUtil.deleteFile(file);
-            return new Result(true,StatusCode.PARSE_QR_OK,"二维码解析成功",new PaymentCodeDto(results[0],results[1]));
-
-        }
-        return new Result(false, StatusCode.PARSE_QR_ERROR,"服务器繁忙，请稍后再试");
+        return new Result(false, StatusCode.UPLOAD_FILE_ERROR,"二维码解析失败，上传的文件为空");
     }
 
+    /**
+     * 生成二维码
+     * @details 孤城落寞 2019-02-17 16:52
+     * @param jsonParms
+     * @param request
+     * @return club.gclmit.payment.qr.model.result.Result
+     */
     @ResponseBody
     @PostMapping
     public Result generatePaymentCode(@RequestBody JSONObject jsonParms, HttpServletRequest request) throws IOException, WriterException {
