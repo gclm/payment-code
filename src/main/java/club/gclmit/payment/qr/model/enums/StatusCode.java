@@ -71,4 +71,9 @@ public class StatusCode {
      */
     public  static  final int PARSE_QR_OK = 20011;
 
+    /**
+     * 异常处理
+     */
+    public  static  final int EXCEPTION_CODE = 20012;
+
 }
