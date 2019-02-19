@@ -55,12 +55,14 @@ spring:
 
 
 server:
-#  springboot 上传文件配置
+# pringboot 上传文件配置
   multipart:
     enabled: true
     #location: roy-upload-tmp
     max-file-size: 5MB
     max-request-size: 5MB
+  # 端口号
+  port: 10001
 
 # Mybatis plus 配置
 mybatis-plus:

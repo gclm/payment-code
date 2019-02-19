@@ -23,3 +23,36 @@
 # 待实现
 
 目前由于前端部分能力有限，保存二维码操作没有完成，目前只能手动截图保存收款码。
+
+
+
+# 使用说明
+
+1. 安装 Java 环境（网上关于 Windows/Linux 教程较多，请自行百度）
+
+2. 在控制台输入以下指令
+
+   ```shell
+   nohup java -jar payment-code-0.1.1-SNAPSHOT.jar &
+   ```
+
+3. 在浏览器上输入 **http://IP_SERVERR:10001 /qr**,就可以正常使用了
+
+# 效果演示
+
+![](https://ws1.sinaimg.cn/large/0072Lfvtly1g0bk0lqwrtj31xs14u44v.jpg)
+
+![](https://ws1.sinaimg.cn/large/0072Lfvtly1g0bk0wiqolj31ye14qdrb.jpg)
+
+![](https://ws1.sinaimg.cn/large/0072Lfvtly1g0bk1xchiej32ag1be7f6.jpg)
+
+**最终效果**
+
+![](https://ws1.sinaimg.cn/large/0072Lfvtly1g0bk1dhy1pj322m172gud.jpg)
+
+
+
+## [演示网站](https://qr.gclmit.club/qr)
+
+## 如果有对这个项目感兴趣的朋友，欢迎一起加入到该项目中来。
+

@@ -8,7 +8,17 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_alibaba_fastjson_1_2_56.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_alibaba_fastjson_1_2_56.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/club.gclmit.payment-code.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/club.gclmit.payment-code.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/club.gclmit.payment-code.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/club.gclmit.payment-code.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/club.gclmit.payment-code.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/club.gclmit.payment-code.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/META-INF/club.gclmit.payment-code.main.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/META-INF/club.gclmit.payment-code.main.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -44,11 +54,6 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="payment-code" type="f1a62948:ProjectNode" />
-                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="payment-code" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
@@ -56,24 +61,6 @@
                 <item name="payment-code" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="payment-code" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="documentation" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="payment-code" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="other" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="payment-code" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="verification" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -83,7 +70,26 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="93">
+              <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -107,7 +113,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/club/gclmit/payment/qr/model/enums/QrCodeContentType.java" />
         <option value="$PROJECT_DIR$/src/test/java/club/gclmit/payment/qr/enums/TitleCodeTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/club/gclmit/payment/qr/model/enums/QrCodeType.java" />
         <option value="$PROJECT_DIR$/src/main/java/club/gclmit/payment/qr/utils/NullJudgeUtil.java" />
@@ -156,8 +161,9 @@
         <option value="$PROJECT_DIR$/src/main/java/club/gclmit/payment/qr/service/impl/PaymentCodeServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/club/gclmit/payment/qr/other/StringUtilTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/club/gclmit/payment/qr/controller/PaymentCodeController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/code/index.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/build.gradle" />
       </list>
     </option>
   </component>
@@ -196,13 +202,27 @@
             <path>
               <item name="payment-code" type="b2602c69:ProjectViewProjectNode" />
               <item name="payment-code" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="payment-code" type="b2602c69:ProjectViewProjectNode" />
               <item name="payment-code" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="libs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="payment-code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="payment-code" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="payment-code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="payment-code" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -351,11 +371,11 @@
     </configuration>
     <list>
       <item itemvalue="Application.StringUtilTest" />
-      <item itemvalue="JUnit.ObjectOperationUtilsTest.setObjectFieldTest" />
-      <item itemvalue="Spring Boot.PaymentCodeApplication" />
       <item itemvalue="Application.Test" />
       <item itemvalue="Gradle.payment-code [clean]" />
       <item itemvalue="Gradle.payment-code [bootJar]" />
+      <item itemvalue="JUnit.ObjectOperationUtilsTest.setObjectFieldTest" />
+      <item itemvalue="Spring Boot.PaymentCodeApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -396,7 +416,8 @@
       <workItem from="1550373006069" duration="5319000" />
       <workItem from="1550390463088" duration="195000" />
       <workItem from="1550390712681" duration="4538000" />
-      <workItem from="1550448309312" duration="20268000" />
+      <workItem from="1550448309312" duration="20922000" />
+      <workItem from="1550534983115" duration="3851000" />
     </task>
     <servers />
   </component>
@@ -433,18 +454,18 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138063000" />
+    <option name="totallyTimeSpent" value="142568000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="968" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49916804" visible="true" weight="0.33102345" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49916804" visible="true" weight="0.15245202" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="JRebel" order="3" sideWeight="0.50083196" side_tool="true" weight="0.21748401" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="Alibaba Cloud Explorer" order="6" />
+      <window_info id="Alibaba Cloud Explorer" order="6" weight="0.32995737" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Spring" order="0" />
       <window_info anchor="bottom" id="Messages" order="1" weight="0.32990867" />
@@ -453,19 +474,19 @@
       <window_info anchor="bottom" id="JRebel Executor" order="4" sideWeight="0.49840087" weight="0.55136985" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.61415523" />
-      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.4989339" visible="true" weight="0.5125571" />
+      <window_info active="true" anchor="bottom" id="Run" order="7" sideWeight="0.4989339" visible="true" weight="0.4977169" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.43493152" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="11" weight="0.32954547" />
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="bottom" id="Build" order="13" weight="0.55365294" />
-      <window_info anchor="bottom" id="Terminal" order="14" weight="0.37671232" />
+      <window_info anchor="bottom" id="Terminal" order="14" weight="0.45547944" />
       <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="16" sideWeight="0.50159913" side_tool="true" weight="0.55136985" />
       <window_info anchor="bottom" id="Database Changes" order="17" />
       <window_info anchor="bottom" id="Version Control" order="18" weight="0.32990867" />
-      <window_info anchor="bottom" id="Alibaba Cloud View" order="19" weight="0.32990867" />
+      <window_info anchor="bottom" id="Alibaba Cloud View" order="19" weight="0.46461186" />
       <window_info anchor="bottom" id="JRebel Console" order="20" sideWeight="0.50159913" side_tool="true" weight="0.6107306" />
       <window_info active="true" anchor="bottom" id="REST Client" order="21" visible="true" weight="0.46461186" />
       <window_info anchor="bottom" id="Tail" order="22" />
@@ -476,7 +497,7 @@
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Mybatis datasource" order="5" side_tool="true" />
       <window_info anchor="right" id="Key Promoter X" order="6" />
-      <window_info anchor="right" id="Gradle" order="7" visible="true" weight="0.32995737" />
+      <window_info anchor="right" id="Gradle" order="7" visible="true" weight="0.14658849" />
       <window_info anchor="right" id="Database" order="8" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info anchor="right" id="Bean Validation" order="10" weight="0.32995737" />
@@ -570,11 +591,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-210" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -837,16 +853,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/club/gclmit/payment/qr/controller/GlobalDefaultExceptionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/club/gclmit/payment/qr/controller/GlobalDefaultExceptionHandler.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/club/gclmit/payment/qr/utils/FileConversionUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1433">
@@ -857,23 +864,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/club/gclmit/payment/qr/utils/QRBarCodeUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/club/gclmit/payment/qr/controller/exception/SystemExceptionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="62" column="5" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="62" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/club/gclmit/payment/qr/utils/QRBarCodeUtil.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/club/gclmit/payment/qr/controller/exception/SystemExceptionHandler.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/club/gclmit/payment/qr/utils/IdWorker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
@@ -943,16 +935,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/img/money.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/img/money.svg" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/img/favicon.ico">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -963,11 +946,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/code.png">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/code.png" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/favicon.ico" />
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/favicon.ico">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
