@@ -1,4 +1,5 @@
-# PayCode
+ ![PayCode](https://ws1.sinaimg.cn/large/0072Lfvtly1g0f7ggruaij31kw0hkgoa.jpg)
+ 
 一个基于支付宝、微信、QQ 付款码的收款码聚合项目
 
 # 采用技术栈
